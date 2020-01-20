@@ -1,0 +1,18 @@
+{
+  "name": "my-pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kovalevr",
+  "license": "ISC",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}
