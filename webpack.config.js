@@ -16,6 +16,26 @@ module.exports = {
       NODE_ENV: JSON.stringify(NODE_ENV),
       LANG: '"ru"'
     })
-  ]
+  ],
+
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {"targets": "> .5% and last 2 versions"}
+              ]
+            ],
+          }
+        }
+      }
+    ]
+  }
 
 };

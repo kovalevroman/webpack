@@ -5,5 +5,5 @@ export const welcome = (message) => {
     console.log('development');
   }
 
-  console.log('message', message);
+  console.log(`message ${message}`, );
 };
