@@ -5,13 +5,18 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode: 'development',
-  entry: './home',
+  context: __dirname + '/frontend/',
+  entry: {
+    home: './home',
+    about: './about'
+  },
   output: {
-    filename: 'build.js',
-    library: 'home'
+    path: __dirname + '/public',
+    filename: '[name].js',
+    library: '[name]'
   },
   watch: true,
-  devtool: NODE_ENV === 'development' ? 'source-map' : null,
+  devtool: NODE_ENV === 'development' ? 'source-map' : false,
   plugins: [
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV),
@@ -21,7 +26,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      templates: path.resolve(__dirname, 'common/templates/')
+      templates: './common/templates/'
     }
   },
 
