@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "node-static": "^0.7.11",
+    "path": "^0.12.7",
     "webpack": "^4.41.5"
   },
   "devDependencies": {
